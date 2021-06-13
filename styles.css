@@ -1,0 +1,352 @@
+html {
+  /* IE 10-11 didn't like using min-height */
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #222;
+}
+
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 3px;
+}
+
+/*navigation*/
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+}
+
+.left_navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+
+.left_navbar > * {
+  padding-left: 6px;
+}
+
+.right_navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 13px;
+}
+
+.mail_images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mail_images > * {
+  padding-right: 3px;
+}
+.app_userlogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3px 0 3px;
+}
+
+.app_userlogo > * {
+  padding: 0 3px 0 3px;
+}
+.user {
+  border-radius: 50%;
+}
+
+img.user {
+  height: 32px;
+  width: 32px;
+}
+
+/* search block */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.noodle_logo {
+  padding-top: 10px;
+}
+
+.search_form {
+  width: 60%;
+  max-width: 584px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 0 16px;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.material-icons {
+  margin-top: 2px;
+  color: #9aa0a6;
+}
+
+.microphone {
+  padding: 0 6px 0 0;
+}
+
+.search_form:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+.search_window {
+  flex: 1;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 95%;
+  font-size: 16px;
+}
+
+input:focus {
+  outline-width: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 18px;
+}
+
+button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 5px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 12px 6px;
+  padding: 0 18px;
+  height: 40px;
+  min-width: 40px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+button:hover {
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+
+.language {
+  padding-top: 32px;
+  white-space: nowrap;
+}
+
+/* footer block */
+
+.footer {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  background-color: #f2f2f2;
+}
+
+.country {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 24px;
+  border-bottom: 1px solid #dadce0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 4px 22px;
+}
+
+.left_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.left_footer > * {
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.right_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.right_footer > * {
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.footer_item {
+  padding: 10px;
+  text-decoration: none;
+  color: #70757a;
+}
+
+/* links */
+
+a {
+  text-decoration: none;
+  color: #222;
+  padding: 4px 4px 0 4px;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.language > a {
+  color: rgb(102, 69, 250);
+}
+
+a.footer {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+/* media queries */
+
+@media screen and (min-width: 1200px) {
+  .footer_container {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content {
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .left_navbar {
+    display: none;
+  }
+  .right_navbar {
+    font-size: 11px;
+  }
+
+  .search {
+    padding: 6px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .noodle_logo {
+    max-width: 65%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search_form {
+    height: 32px;
+    margin: 0;
+  }
+
+  .material-icons {
+    margin-top: 3px;
+    color: #9aa0a6;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .microphone {
+    padding: 0 3px 0 0;
+  }
+
+  .microphone > img {
+    height: 16px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 16px;
+  }
+
+  button {
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .language {
+    padding-top: 22px;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+
+  .country {
+    font-size: 12px;
+  }
+
+  .footer_container {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .content {
+    padding: 5px;
+  }
+
+  button {
+    font-size: 10px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+}
